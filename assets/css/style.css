@@ -96,8 +96,6 @@ nav {
 
 /* Hero Section */
 .hero {
-    background-size: cover;
-    background-position: center;
     position: relative;
     height: 80vh;
     min-height: 500px;
@@ -105,9 +103,9 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/cropped-ongedierte-schutter-40-percent-opaque.webp');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-content h1 {
