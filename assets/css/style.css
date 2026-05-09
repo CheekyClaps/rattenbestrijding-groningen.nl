@@ -96,6 +96,8 @@ nav {
 
 /* Hero Section */
 .hero {
+    background-size: cover;
+    background-position: center;
     position: relative;
     height: 80vh;
     min-height: 500px;
