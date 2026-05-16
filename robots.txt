@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Disallow: /assets/css/
+Disallow: /assets/images/*.woff
+Disallow: /assets/images/*.woff2
+
+# Explicitly allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+Sitemap: https://rattenbestrijding-groningen.nl/sitemap.xml
