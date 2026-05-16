@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina niet gevonden | Rattenbestrijding Groningen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        // SEO Friendly Redirect Logic
+        const path = window.location.pathname;
+        const redirects = {
+            '/contact/': '/contact.html',
+            '/contact': '/contact.html',
+            '/werkwijze-en-kosten/': '/werkwijze-en-kosten.html',
+            '/werkwijze-en-kosten': '/werkwijze-en-kosten.html',
+            '/agrarisch/': '/agrarische-sector.html',
+            '/zakelijk/': '/bedrijven-en-haccp.html',
+            '/particulier/': '/particulieren.html'
+        };
+
+        // Handle old WordPress style blog links
+        if (path.includes('/2025/') || path.includes('/2024/')) {
+            window.location.href = '/blog.html';
+        } else if (redirects[path]) {
+            window.location.href = redirects[path];
+        } else if (path.endsWith('/') && path.length > 1) {
+            // Try to match folder/ to folder.html
+            window.location.href = path.slice(0, -1) + '.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/images/cropped-logo.png" alt="Rattenbestrijding Groningen">
+                    <span>Rattenbestrijding Groningen</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section style="text-align: center; padding: 100px 20px;">
+            <div class="container">
+                <h1>Oeps! Pagina niet gevonden (404)</h1>
+                <p>De pagina die u zoekt lijkt niet meer te bestaan of is verplaatst.</p>
+                <div style="margin-top: 30px;">
+                    <a href="index.html" class="btn">Terug naar Home</a>
+                    <a href="contact.html" class="btn" style="background-color: transparent; border: 1px solid var(--primary-color);">Neem contact op</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
